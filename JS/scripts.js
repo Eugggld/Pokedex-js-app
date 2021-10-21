@@ -3,3 +3,5 @@ let pokemonList = [
   {name: 'Charmeleon', height:3.07, type: 'fire'},
   {name: 'Charizard', height:5.07, type: ['fire','flying']},
 ];
+
+// Put some text. //
