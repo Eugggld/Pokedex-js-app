@@ -1,9 +1,5 @@
-alert('Hello world');
-
-let favoriteFood = 'Canelons';
-document.write(favoriteFood);
-
-let size = 100;
-let doubleSize = size * 2;
-let minSize = (doubleSize * 2) - (size / 2);
-document.write(minSize);
+let pokemonList = [
+  {name: 'Charmander', height:0.6, type: 'fire'},
+  {name: 'Charmeleon', height:3.07, type: 'fire'},
+  {name: 'Charizard', height:5.07, type: ['fire','flying']},
+];
