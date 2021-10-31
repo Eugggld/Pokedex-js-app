@@ -7,7 +7,16 @@ let pokemonList = [
 //Listing the name and height of each pokemon in the array. Making Names and one Height visible on Output.
 //Adding for Loop and if Conditional.
 //Adapting changes after Correction Task.
-for (let i = 0;i < pokemonList.length;i++){
+
+/* for (let i = 0;i < pokemonList.length;i++){
   if (pokemonList[i].height > 5.0) document.write("<br><br>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, thats tall!" + "<br>");
   else document.write("<br><br>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + "<br>");
-}
+} */
+
+/* pokemonList.forEach(function(pokemon) {
+  console.log(pokemon.name + ' is a size ' + pokemon.height + ' and a type' + pokemon.type);
+}); */
+
+Object.keys(pokemonList).forEach(function(property) {
+  console.log(pokemonList[property]);
+});
