@@ -1,9 +1,25 @@
-let pokemonList = [
-  {name: 'Charmander', height:0.6, type: ['fire']},
-  {name: 'Charmeleon', height:3.07, type: ['fire']},
-  {name: 'Charizard', height:5.07, type: ['fire','flying']},
-];
+let pokemonRepository = (function () {
+  let pokemonList = [
+    {name: 'Charmander', height:0.6, type: ['fire']},
+    {name: 'Charmeleon', height:3.07, type: ['fire']},
+    {name: 'Charizard', height:5.07, type: ['fire','flying']},
+  ];
 
+  function getAll() {
+    return pokemonList;
+  }
+
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+
+  return {
+    getAll: getAll;
+    add: add;
+  };
+})();
+
+console.log( pokemonRepository.getAll() );
 //Listing the name and height of each pokemon in the array. Making Names and one Height visible on Output.
 //Adding for Loop and if Conditional.
 //Adapting changes after Correction Task.
