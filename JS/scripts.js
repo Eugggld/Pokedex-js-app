@@ -10,7 +10,14 @@ let pokemonRepository = (function () {
   }
 
   function add(pokemon) {
-    pokemonList.push(pokemon);
+    if (
+      typeof pokemon === "object" &&
+      "name" in pokemon
+    ) {
+      pokemonList.push(pokemon);
+    } else {
+      console.log("Pokemon NOT correct");
+    }
   }
 
   return {
@@ -40,6 +47,8 @@ console.log( pokemonRepository.getAll() );
 pokemonRepository.add({ name: 'Pigeon', height: 1, type: ['flying'] });
 
 pokemonRepository.add({ name: 'Squirtle', height: 1, type: ['water'] });
+
+pokemonRepository.add({ height: 1, type: ['water'] }); //Pokemon NOT correct
 
 pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height > 5.0) document.write("<br><br>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats tall!" + "<br>");
