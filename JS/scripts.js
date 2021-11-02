@@ -37,17 +37,21 @@ console.log( pokemonRepository.getAll() );
   console.log(pokemonList[property]);
 }); */
 
+pokemonRepository.add({ name: 'Pigeon', height: 1, type: ['flying'] });
+
+pokemonRepository.add({ name: 'Squirtle', height: 1, type: ['water'] });
+
 pokemonRepository.getAll().forEach(function (pokemon) {
   if (pokemon.height > 5.0) document.write("<br><br>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats tall!" + "<br>");
   else document.write("<br><br>" + pokemon.name + " (height: " + pokemon.height + ")" + "<br>");
 });
 
-
- function add(name, type) {
+// NO need to add new function. See line 40 and 42:pokemonRepository.add({})
+ /* function add(name, type) {
    console.log(name,type)
    document.write("<br><br>Another one is " + name + " and its type is " + type + ".<br>");
  }
 
  add('Squirtle', 'water');
   add('Pikachu', 'electricity');
-   add('Pigeon', 'flying');
+   add('Pigeon', 'flying');*/
