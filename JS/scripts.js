@@ -39,12 +39,13 @@ function addListItem(pokemon){
   button.classList.add("button-class");
   listItem.appendChild(button);
   pokemonList.appendChild(listItem);
-  //button.addEventListener("click", function(event) {
-    //showDetails(pokemon); //add event listener. Listen to click. Call showDetails as handler function. Thus you pass the pokemon object as a paramenter when a pokemon is clicked. Should be same parameter as in addListItem().
-  }
+  button.addEventListener("click", function (event)} {
+  showDetails(pokemon); //add event listener. Listen to click. Call showDetails as handler function. Thus you pass the pokemon object as a paramenter when a pokemon is clicked. Should be same parameter as in addListItem().
+});
+}
 
   function showDetails(pokemon){
-    console.log(item); //Inside the function, run a console.log() on the Pokémon object that’s passed as the parameter. You’ll do more than just log the data in a later task.
+    console.log(pokemon); //Inside the function, run a console.log() on the Pokémon object that’s passed as the parameter. You’ll do more than just log the data in a later task.
   }
 
   return {
