@@ -23,7 +23,7 @@ let pokemonRepository = (function () {
     let button = document.createElement('button');
     button.innerText = pokemon.name;
     button.classList.add("button-class");
-    listItem.appendChild(button);
+    listPokemon.appendChild(button);
     pokemonList.appendChild(listPokemon);
     button.addEventListener("click", function (event) {
       showDetails(pokemon); //add event listener. Listen to click. Call showDetails as handler function. Thus you pass the pokemon object as a paramenter when a pokemon is clicked. Should be same parameter as in addListItem().
@@ -87,36 +87,4 @@ pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
-  //Listing the name and height of each pokemon in the array. Making Names and one Height visible on Output.
-  //Adding for Loop and if Conditional.
-  //Adapting changes after Correction Task.
-
-  /* for (let i = 0;i < pokemonList.length;i++){
-  if (pokemonList[i].height > 5.0) document.write("<br><br>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, thats tall!" + "<br>");
-  else document.write("<br><br>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + "<br>");
-} */
-
-/* pokemonList.forEach(function(pokemon) {
-console.log(pokemon.name + ' is a size ' + pokemon.height + ' and a type' + pokemon.type);
-}); */
-
-/* Object.keys(pokemonList).forEach(function(property) {
-console.log(pokemonList[property]);
-}); */
-
-
-/*
-pokemonRepository.getAll().forEach(function (pokemon) {
-if (pokemon.height > 5.0) document.write("<br><br>" + pokemon.name + " (height: " + pokemon.height + ") - Wow, thats tall!" + "<br>");
-else document.write("<br><br>" + pokemon.name + " (height: " + pokemon.height + ")" + "<br>");
-});*/
-
-// NO need to add new function. See line 40 and 42:pokemonRepository.add({})
-/* function add(name, type) {
-console.log(name,type)
-document.write("<br><br>Another one is " + name + " and its type is " + type + ".<br>");
-}
-
-add('Squirtle', 'water');
-add('Pikachu', 'electricity');
-add('Pigeon', 'flying');*/
+});
