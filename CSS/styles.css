@@ -1,3 +1,29 @@
+body {
+  margin-left: 20px;
+  background-color: #129ff0;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: 'Urbanist', sans-serif;
+  color: lightBlue;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Urbanist', sans-serif;
+  color: #ff928b;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .button-class {
   background-color: blue;
   border: none;
@@ -10,6 +36,7 @@
   margin: 5px 10px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 20px;
   }
 
 .button-class:hover {
