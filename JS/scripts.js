@@ -1,17 +1,17 @@
 let pokemonRepository = (function() {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   let modalContainer = document.querySelector('#modal-container');
 
-  function showModal(title, text) {
+  function showModal(pokemon) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
 
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
-    closeButtonElement.innerText = 'Close';
+    closeButtonElement.innerText = 'CLOSE';
     closeButtonElement.addEventListener('click', hideModal);
 
     let titleElement = document.createElement('h1');
@@ -179,9 +179,25 @@ return {
 };
 })();
 
-pokemonRepository.loadList().then(function() {
+pokemonRepository.loadList().then(function () {
   // Now the data is loaded!
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
   });
-})();
+});
+
+
+let pokemonSearchBar = document.querySelector('#search-input');
+
+pokemonSearchBar.addEventListener('input', function() {
+  let pokeItem = document.querySelectorAll('li');
+  let filter = pokemonSearchBar.value.toUpperCase();
+
+  pokeItem.forEach(function(pokemon){
+    if (pokemon.innerText.toUpperCase().indexOf(filter) === 0) {
+      pokemon.style.display = 'block';
+    } else {
+      pokemon.style.display = 'none';
+    }
+  });
+});

@@ -7,6 +7,21 @@ body {
   line-height: 1.2;
 }
 
+.navbar-logo {
+  font-size: 60px;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-input {
+  width: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: blue;
+}
+
 h1 {
   font-family: 'Urbanist', sans-serif;
   color: lightBlue;
@@ -96,4 +111,12 @@ h2 {
 
 .modal p {
   margin-bottom: 0;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+img {
+  width: 40%;
 }
