@@ -1,6 +1,6 @@
 let pokemonRepository = (function() {
   let pokemonList = [];
-let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   let modalContainer = document.querySelector('#modal-container');
 
@@ -157,18 +157,15 @@ function loadDetails(item) {
   });
 }
 
-/*function showDetails(item) {
-pokemonRepository.loadDetails(item).then(function () {
-console.log(item); //Inside the function, run a console.log() on the Pokémon object that’s passed as the parameter. You’ll do more than just log the data in a later task.
-});
-}*/
-
 function showDetails(pokemon) { //(instead of item, then Pokemon?)
   loadDetails(pokemon).then(function () {
     console.log(pokemon);
     showModal(pokemon);
   });
 }
+
+
+
 
 return {
   getAll: getAll,
