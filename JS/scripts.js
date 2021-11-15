@@ -29,7 +29,7 @@ let pokemonRepository = (function() {
   modalPokemonImg.src = imageUrl;
 
     let types = document.createElement('p'); //empty parapraph type
-    types.innerText = type;
+    types.innerText = type[0].type.name; //to get the value on index 0. To display all: loop.
 
 
 
