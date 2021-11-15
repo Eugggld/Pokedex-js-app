@@ -4,22 +4,35 @@ let pokemonRepository = (function() {
 
   let modalContainer = document.querySelector('#modal-container');
 
-  function showModal(pokemon) {
+  function showModal(name, height, imageUrl, type) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
-    console.log(pokemon);
+    console.log(type);
+
+    let modalTitle = name
+    let text = `Height: ${height}`
+    //console.log(pokemon)
 
     let closeButtonElement = document.createElement('button');
     closeButtonElement.classList.add('modal-close');
     closeButtonElement.innerText = 'CLOSE';
     closeButtonElement.addEventListener('click', hideModal);
 
-    let titleElement = document.createElement('h1');
-    titleElement.innerText = title;
+    let titleElement = document.createElement('h2');
+    titleElement.innerText = modalTitle;
 
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
+
+    let modalPokemonImg = document.createElement('img'); //add pokemon image in modal
+  modalPokemonImg.src = imageUrl;
+
+    let types = document.createElement('p'); //empty parapraph type
+    types.innerText = type;
+
+
+
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
@@ -27,6 +40,9 @@ let pokemonRepository = (function() {
 
     modalContainer.appendChild(modal);
 
+    modal.appendChild(modalPokemonImg);
+
+    modal.appendChild(types); //this appends the type to the Modal on line 31
 
     modalContainer.classList.add('is-visible');
   }
@@ -163,7 +179,7 @@ let pokemonRepository = (function() {
   function showDetails(pokemon) { //(instead of item, then Pokemon?)
     loadDetails(pokemon).then(function () {
       console.log(pokemon.name);
-      showModal(pokemon);
+      showModal(pokemon.name, pokemon.height, pokemon.imageUrl, pokemon.types); // you call that function with that parameter
     });
   }
 
