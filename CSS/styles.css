@@ -25,9 +25,9 @@ body {
 h1 {
   font-family: 'Urbanist', sans-serif;
   color: lightBlue;
-  text-align: center;
+  text-align: left;
   margin-left: 0px;
-  font-size: 90px;
+  font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -90,7 +90,8 @@ h2 {
   box-sizing: border-box;
   background: #fff;
   padding: 15px;
-  width: 100%;
+  width: 70%;
+  height: 70%;
   max-width: 700px;
   text-align: left;
   border-radius: 20px;
@@ -118,5 +119,5 @@ h2 {
 }
 
 img {
-  width: 40%;
+  width: 80%;
 }
