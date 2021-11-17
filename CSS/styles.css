@@ -21,6 +21,11 @@ body {
   margin-right: auto;
 }
 
+.navbar-toggler-icon {
+  background-color: #ff928b;
+  border-radius: 20px;
+}
+
 #search-input {
   width: 500px;
   position: relative;
@@ -131,6 +136,11 @@ img {
 
 .page-container {
   margin-top: 60px;
+}
+
+.btn-primary {
+  background-color: orange;
+	color: blue;
 }
 
 .btn-secondary {

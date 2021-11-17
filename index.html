@@ -10,12 +10,12 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-transparent fixed-top">
       <a class="navbar-brand" href="#">
         <h1 class="text-uppercase"> Pokedex </h1>
       </a>
 
-      <button class=" navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,18 +45,16 @@
       </div>
     </nav>
   </header>
-  <!-- <button id="show-modal">Show modal</button>
-  <button id="show-dialog">Show Dialog</button>
-  <div id="modal-container"></div> -->
+
 
   <!-- Button trigger MODAL -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Launch demo MODAL
-  </button>
-
+  </button> -->
+<main>
   <!-- MODAL -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialoh" role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel"> Modal Title </h5>
@@ -78,11 +76,12 @@
 <!-- Unordered list of Pokemon -->
   <ul class="pokemon-list list-group"></ul>
 
+
   <div id="modal-container"></div>
 
   <button id="show-modal">Show modal</button>
   <button id='show-dialog'>Show dialog</button>
-
+</main>
   <!-- All scripts here-->
   <script src="js/js:promise-polyfill.js"></script>
   <script src="js/js:fetch-polyfill.js"></script>
