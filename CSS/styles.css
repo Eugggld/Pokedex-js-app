@@ -7,6 +7,13 @@ body {
   line-height: 1.2;
 }
 
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-color: red;
+}
+
 .navbar-logo {
   font-size: 60px;
   color: white;
@@ -91,7 +98,7 @@ h2 {
   background: #fff;
   padding: 15px;
   width: 70%;
-  height: 70%;
+
   max-width: 700px;
   text-align: left;
   border-radius: 20px;
@@ -119,5 +126,19 @@ h2 {
 }
 
 img {
-  width: 80%;
+  width: 50%;
+}
+
+.page-container {
+  margin-top: 60px;
+}
+
+.btn-secondary {
+  background-color: lightblue;
+	color: blue;
+}
+
+ul {
+text-align: center;
+list-style-type: none;
 }
