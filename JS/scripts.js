@@ -218,4 +218,5 @@ pokemonSearchBar.addEventListener('input', function() {
       pokemon.style.display = 'none';
     }
   });
+
 });
