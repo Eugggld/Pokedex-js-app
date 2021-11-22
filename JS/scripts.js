@@ -4,7 +4,29 @@ let pokemonRepository = (function() {
 
   let modalContainer = document.querySelector('#modal-container');
 
-  function showModal(name, height, imageUrl, type) {
+  function showModal(item) {
+    let modalBody = $('.modal-body');
+    let modalTitel = $('.modal-title');
+    let modalHeader = $('modal-header');
+
+    //modalHeader.empty();
+    modalTitle.empty();
+    modalBoday.empty();
+
+    //creating elemnt for name ind Modal contentElement
+    let nameElement = $(""<h1>"" + item.name + ""</h1>"");
+    // // creating img in modal contentElement
+    let imageElement = $('img class="modal-img" style="width:50%">');
+    imageElement.attr("src", item.imageUrl);
+    let heightElement = $("<p>" + "height : " + item.height + "</p>");
+
+    modalTitle.append(nameELement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+    
+  }
+
+/*  function showModal(name, height, imageUrl, type) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
@@ -48,6 +70,8 @@ let pokemonRepository = (function() {
   }
 
   let dialogPromiseReject; // This can be set later, by showDialog
+
+*/
 
   function hideModal() {
     let modalContainer = document.querySelector('#modal-container');
@@ -138,7 +162,7 @@ let pokemonRepository = (function() {
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add("button-class"); // instead of the older ("button-class")
+    button.classList.add("btn"); // instead of the older ("button-class")
     listPokemon.appendChild(button);
     pokemonList.appendChild(listPokemon);
     button.addEventListener("click", function (event) {
